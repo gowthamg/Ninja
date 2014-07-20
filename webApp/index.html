@@ -1,0 +1,41 @@
+﻿    <!DOCTYPE html>
+    <html ng-app="HRMSApp">
+    <head>
+        <title>TA-HRMS</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" rel="stylesheet" />
+        <link href="content/styles/custome/style.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <!--Login Screen-->
+        <div data-role="page" id="login-page" ng-controller="loginController">
+            <div data-role="header" data-theme="b" class="header" data-position="fixed">
+                <img src="content/images/ta-logo.png" alt="logo" />
+            </div><!--end header -->
+            <div role="main" class="ui-content">
+                <form id="login-form" ng-submit="authenticate()" name="login">
+                    <input class="user-id" type="text" ng-model="userId" placeholder="User ID" required>
+                    <input class="password" type="password" ng-model="password" placeholder="Password" required>
+                    <button data-theme="b" type="submit">Login</button>
+                </form>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <div data-role="navbar">
+                    <ul>
+                       <li><a href="#" data-icon="info">About</a></li>
+                       <li><a href="#" data-icon="home">Home</a></li>
+                       <li><a href="#" data-icon="power">Logout</a></li>
+                   </ul>
+               </div>
+           </div>
+       </div><!--end login-page-->
+
+       <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <!--<script src="scripts/lib/cordova.js"></script>-->
+       <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+       <script src="scripts/lib/angular.min.js"></script>
+       <script src="scripts/custome/app.js"></script>
+       <script src="scripts/custome/controllers/loginController.js"></script>
+   </body>
+   </html>
